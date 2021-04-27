@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <div class="container">
+       <div class="row">
+
+        <form action="{{ url_for('predmet_novi') }}", method="post">
+            <h3>Novi predmet</h3>
+            <div class="form-group">
+                <label  for="exampleInputText1">Šifra</label>
+                <input type="text" class="form-control" name="sifra" id="exampleInputText1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText1">Naziv</label>
+                <input type="text" class="form-control" name="naziv" id="exampleInputText1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText1">Godina studija</label>
+                <input type="text" class="form-control" name="godina_studija" id="exampleInputText1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText1">ESPB</label>
+                <input type="text" class="form-control" name="espb" id="exampleInputText1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText1">Obavezni / Izborni</label>
+                    <select  class="form-control" name="o/i" aria-label="Default select example" id="exampleInputText1">
+                        <option selected>Status predmeta</option>
+                        <option value="1">Obavezni</option>
+                        <option value="2">Izborni</option>
+                    </select>
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>   
+
+       </div>
+   </div>
+{% endblock %}
